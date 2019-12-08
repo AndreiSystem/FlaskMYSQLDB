@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="div-form">
+    <h1 style="">Cadastrar</h1>
+    <form action="/salvar" method="POST" class="form-div">
+        <div class="box-name">
+            <label for="name">Nome: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="box-sobrenome">
+            <label for="last_name">Sobrenome: </label>
+            <input type="text" name="last_name" id="last_name" required>
+        </div>
+        <div class="box-cpf">
+            <label for="cpf">Cpf: </label>
+            <input type="text" name="cpf" id="cpf" required>
+        </div>
+        <input class="btn-salvar" type="submit" value="Salvar">
+    </form>
+</div>
+
+{% endblock %}

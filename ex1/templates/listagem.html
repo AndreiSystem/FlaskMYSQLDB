@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block content  %}
+<div class="container-register">
+    <h1 style="text-align: center; color: white;">Usuários</h1>
+    <p><a href="/cadastrar" class="btn-button">Novo usuário</a></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in list_return %}
+            <tr>
+                <td>{{person[0]}}</td>
+                <td>{{person[1]}}</td>
+                <td>{{person[2]}}</td>
+                <td>{{person[3]}}</td>
+                <td><a href="/editar?id={{ person[0] }}" class="btn-editar">Editar</a></td>
+                <td><a href="/excluir?id={{ person[0] }}" class="btn-excluir">Excluir</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+{% endblock %}

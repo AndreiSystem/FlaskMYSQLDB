@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content  %}
+<div class="div-form" style="margin-top: 3%;">
+    <h1>Cadastrar</h1>
+    <form action="/salvar_editar" method="POST" class="form-div">
+        <div class="box-id">
+            <label for="id">ID: </label>
+            <input type="text" name="id" id="id" value="{{person[0]}}" readonly>
+        </div>
+        <div class="box-name">
+            <label for="nome">Nome: </label>
+            <input type="text" name="name" id="name" value="{{person[1]}}" required>
+        </div>
+        <div class="box-sobrenome">
+            <label for="sobrenome">Sobrenome: </label>
+            <input type="text" name="last_name" id="last_name" value="{{person[2]}}" required>
+        </div>
+        <div class="box-cpf">
+            <label for="cpf">Cpf: </label>
+            <input type="text" name="cpf" id="cpf" value="{{person[3]}}" required>
+        </div>
+        <input type="submit" value="Salvar" class="btn-salvar">
+    </form>
+</div>
+
+
+
+{% endblock %}
